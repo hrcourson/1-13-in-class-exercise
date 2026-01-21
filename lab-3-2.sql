@@ -39,4 +39,9 @@
 -- | Washington Nationals          | 78.0             |
 -- +-------------------------------+------------------+
 
-
+SELECT name,
+AVG(wins) AS avg_wins_per_season
+FROM teams
+WHERE year >= 2001
+GROUP BY name
+ORDER BY name ASC;
